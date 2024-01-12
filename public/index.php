@@ -2,9 +2,12 @@
 
 require_once "../vendor/autoload.php";
 
-// $views = '../src/views';
-// $cache = '../cache';
-// $blade = new Blade($views, $cache);
+use Jenssegers\Blade\Blade;
+
+$views = '../src/views';
+$cache = '../cache';
+$blade = new Blade($views, $cache);
+
 // Router system
 $dotenv = Dotenv\Dotenv::createImmutable("../");
 $dotenv->load();
