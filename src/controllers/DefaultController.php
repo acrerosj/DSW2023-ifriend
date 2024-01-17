@@ -2,11 +2,10 @@
 
 namespace Dsw\Ifriend\Controllers;
 
-class DefaultController {
+class DefaultController extends Controller{
 
     public function index() {
-        //echo "Estoy en index";
-        global $blade;
-        echo $blade->make('index')->render();
+        $router = $this->router;
+        echo $this->blade->make('index', compact('router'))->render();
     }
 }
